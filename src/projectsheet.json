@@ -1,0 +1,3262 @@
+{
+    "name": "Project Plan",
+    "version": 1,
+    "totalRowCount": 41,
+    "accessLevel": "OWNER",
+    "effectiveAttachmentOptions": [
+        "EVERNOTE",
+        "BOX_COM",
+        "GOOGLE_DRIVE",
+        "ONEDRIVE",
+        "DROPBOX",
+        "EGNYTE",
+        "LINK",
+        "FILE"
+    ],
+    "ganttEnabled": true,
+    "dependenciesEnabled": true,
+    "resourceManagementEnabled": true,
+    "resourceManagementType": "LEGACY_RESOURCE_MANAGEMENT",
+    "cellImageUploadEnabled": true,
+    "userSettings": {
+        "criticalPathEnabled": false,
+        "displaySummaryTasks": true
+    },
+    "userPermissions": {
+        "summaryPermissions": "ADMIN"
+    },
+    "workspace": {
+        "name": "Project Management Office"
+    },
+    "projectSettings": {
+        "workingDays": [
+            "MONDAY",
+            "TUESDAY",
+            "WEDNESDAY",
+            "THURSDAY",
+            "FRIDAY"
+        ],
+        "nonWorkingDays": [
+            "2013-12-24",
+            "2013-12-25"
+        ],
+        "lengthOfDay": 8.0
+    },
+    "hasSummaryFields": true,
+    "createdAt": "2023-08-10T00:11:24Z",
+    "modifiedAt": "2023-08-10T00:11:27Z",
+    "isMultiPicklistEnabled": true,
+    "columns": [
+        {
+            "id": 1278478443827076,
+            "version": 0,
+            "index": 0,
+            "title": "Schedule Health",
+            "type": "PICKLIST",
+            "symbol": "RYG",
+            "options": [
+                "Red",
+                "Yellow",
+                "Green"
+            ],
+            "locked": true,
+            "lockedForUser": false,
+            "validation": false,
+            "width": 94
+        },
+        {
+            "id": 5782078071197572,
+            "version": 0,
+            "index": 1,
+            "title": "Task Name",
+            "type": "TEXT_NUMBER",
+            "primary": true,
+            "tags": [
+                "GANTT_DISPLAY_LABEL"
+            ],
+            "validation": false,
+            "width": 238
+        },
+        {
+            "id": 3530278257512324,
+            "version": 0,
+            "index": 2,
+            "title": "Status",
+            "type": "PICKLIST",
+            "options": [
+                "Not Started",
+                "In Progress",
+                "Complete",
+                "Canceled",
+                "On Hold"
+            ],
+            "validation": true,
+            "width": 79
+        },
+        {
+            "id": 8033877884882820,
+            "version": 0,
+            "index": 3,
+            "title": "Assigned To",
+            "type": "CONTACT_LIST",
+            "tags": [
+                "GANTT_ASSIGNED_RESOURCE"
+            ],
+            "validation": false,
+            "width": 66
+        },
+        {
+            "id": 715528490405764,
+            "version": 0,
+            "index": 4,
+            "title": "Start Date",
+            "type": "ABSTRACT_DATETIME",
+            "tags": [
+                "GANTT_START_DATE"
+            ],
+            "validation": false,
+            "width": 82
+        },
+        {
+            "id": 5219128117776260,
+            "version": 0,
+            "index": 5,
+            "title": "End Date",
+            "type": "ABSTRACT_DATETIME",
+            "tags": [
+                "GANTT_END_DATE"
+            ],
+            "validation": false,
+            "width": 76
+        },
+        {
+            "id": 2967328304091012,
+            "version": 0,
+            "index": 6,
+            "title": "% Complete",
+            "type": "TEXT_NUMBER",
+            "tags": [
+                "GANTT_PERCENT_COMPLETE"
+            ],
+            "validation": false,
+            "width": 53
+        },
+        {
+            "id": 7470927931461508,
+            "version": 0,
+            "index": 7,
+            "title": "Duration",
+            "type": "DURATION",
+            "tags": [
+                "GANTT_DURATION"
+            ],
+            "validation": false,
+            "width": 76
+        },
+        {
+            "id": 1841428397248388,
+            "version": 0,
+            "index": 8,
+            "title": "Predecessors",
+            "type": "PREDECESSOR",
+            "tags": [
+                "GANTT_PREDECESSOR"
+            ],
+            "validation": false,
+            "width": 56
+        },
+        {
+            "id": 6345028024618884,
+            "version": 0,
+            "index": 9,
+            "title": "Target Start Date",
+            "type": "DATE",
+            "locked": true,
+            "lockedForUser": false,
+            "validation": false,
+            "width": 77
+        },
+        {
+            "id": 4093228210933636,
+            "version": 0,
+            "index": 10,
+            "title": "Target End Date",
+            "type": "DATE",
+            "locked": true,
+            "lockedForUser": false,
+            "validation": false,
+            "width": 105
+        },
+        {
+            "id": 8596827838304132,
+            "version": 0,
+            "index": 11,
+            "title": "Schedule Delta (%)",
+            "type": "TEXT_NUMBER",
+            "locked": true,
+            "lockedForUser": false,
+            "validation": false,
+            "width": 82
+        },
+        {
+            "id": 434053513695108,
+            "version": 0,
+            "index": 12,
+            "title": "Schedule Delta (Working Days)",
+            "type": "TEXT_NUMBER",
+            "locked": true,
+            "lockedForUser": false,
+            "validation": false,
+            "width": 112
+        }
+    ],
+    "rows": [
+        {
+            "id": 8777995644080004,
+            "rowNumber": 1,
+            "locked": true,
+            "lockedForUser": false,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))",
+                    "linksOutToCells": [
+                        {
+                            "status": "OK",
+                            "sheetId": 7886357347127172,
+                            "rowId": 5189189691019140,
+                            "columnId": 5148759373598596,
+                            "sheetName": "Project Metadata"
+                        }
+                    ]
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Project Apollo",
+                    "displayValue": "Project Apollo",
+                    "linkInFromCell": {
+                        "status": "OK",
+                        "sheetId": 7886357347127172,
+                        "rowId": 5189189691019140,
+                        "columnId": 82209792806788,
+                        "sheetName": "Project Metadata"
+                    }
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "In Progress",
+                    "displayValue": "In Progress",
+                    "linksOutToCells": [
+                        {
+                            "status": "OK",
+                            "sheetId": 7886357347127172,
+                            "rowId": 5189189691019140,
+                            "columnId": 2896959559913348,
+                            "sheetName": "Project Metadata"
+                        }
+                    ]
+                },
+                {
+                    "columnId": 8033877884882820
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2022-12-19T08:00:00",
+                    "formula": "=MIN(CHILDREN())",
+                    "linksOutToCells": [
+                        {
+                            "status": "OK",
+                            "sheetId": 7886357347127172,
+                            "rowId": 5189189691019140,
+                            "columnId": 3459909513334660,
+                            "sheetName": "Project Metadata"
+                        }
+                    ]
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-02-10T16:59:59",
+                    "linksOutToCells": [
+                        {
+                            "status": "OK",
+                            "sheetId": 7886357347127172,
+                            "rowId": 5189189691019140,
+                            "columnId": 7963509140705156,
+                            "sheetName": "Project Metadata"
+                        }
+                    ]
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.28,
+                    "displayValue": "28%",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]1), CHILDREN(Duration1))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "40d",
+                    "displayValue": "40d",
+                    "formula": "=CALCDURATION([Start Date]1, [End Date]1)"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2022-12-19"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-02-11"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 193008854404996,
+            "rowNumber": 2,
+            "parentId": 8777995644080004,
+            "locked": true,
+            "lockedForUser": false,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Planning",
+                    "displayValue": "Planning"
+                },
+                {
+                    "columnId": 3530278257512324
+                },
+                {
+                    "columnId": 8033877884882820
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2022-12-19T08:00:00",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-14T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.57,
+                    "displayValue": "57%",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]2), CHILDREN(Duration2))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "20d",
+                    "displayValue": "20d",
+                    "formula": "=CALCDURATION([Start Date]2, [End Date]2)"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2022-12-19"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-14"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 4696608481775492,
+            "rowNumber": 3,
+            "parentId": 193008854404996,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Project Kickoff",
+                    "displayValue": "Project Kickoff"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "In Progress",
+                    "displayValue": "In Progress"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "kirk@mbfcorp.com",
+                    "displayValue": "Kirk Caskey"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2022-12-19T08:00:00"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2022-12-23T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.25,
+                    "displayValue": "25%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "5d",
+                    "displayValue": "5d"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2022-12-19"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2022-12-25"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 2444808668090244,
+            "rowNumber": 4,
+            "parentId": 193008854404996,
+            "siblingId": 4696608481775492,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 1",
+                    "displayValue": "Activity 1"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "On Hold",
+                    "displayValue": "On Hold"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "henry@mbfcorp.com",
+                    "displayValue": "Henry McNeal"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2022-12-26T08:00:00",
+                    "formula": "=CALCSTART(Duration4, [Start Date]3, [End Date]3, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2022-12-30T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.3,
+                    "displayValue": "30%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "5d",
+                    "displayValue": "5d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "3",
+                    "displayValue": "3"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2022-12-26"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2022-12-31"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 6948408295460740,
+            "rowNumber": 5,
+            "parentId": 193008854404996,
+            "siblingId": 2444808668090244,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 2",
+                    "displayValue": "Activity 2"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Complete",
+                    "displayValue": "Complete"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "june@mbfcorp.com",
+                    "displayValue": "June Taylor"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-02T08:00:00",
+                    "formula": "=CALCSTART(Duration5, [Start Date]4, [End Date]4, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-10T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 1.0,
+                    "displayValue": "100%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "7d",
+                    "displayValue": "7d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "4",
+                    "displayValue": "4"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-01"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-09"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.142857142857143,
+                    "displayValue": "14%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 1318908761247620,
+            "rowNumber": 6,
+            "parentId": 193008854404996,
+            "siblingId": 6948408295460740,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 3",
+                    "displayValue": "Activity 3"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "In Progress",
+                    "displayValue": "In Progress"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-11T08:00:00",
+                    "formula": "=CALCSTART(Duration6, [Start Date]5, [End Date]5, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-13T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.75,
+                    "displayValue": "75%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "3d",
+                    "displayValue": "3d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "5",
+                    "displayValue": "5"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-10"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-14"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 5822508388618116,
+            "rowNumber": 7,
+            "parentId": 193008854404996,
+            "siblingId": 1318908761247620,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Collect Deliverables",
+                    "displayValue": "Collect Deliverables"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Canceled",
+                    "displayValue": "Canceled"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-14T08:00:00"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-14T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-14"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-14"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 3570708574932868,
+            "rowNumber": 8,
+            "parentId": 8777995644080004,
+            "siblingId": 193008854404996,
+            "locked": true,
+            "lockedForUser": false,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Execution",
+                    "displayValue": "Execution"
+                },
+                {
+                    "columnId": 3530278257512324
+                },
+                {
+                    "columnId": 8033877884882820
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-14T16:59:59",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-23T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]8), CHILDREN(Duration8))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "6d",
+                    "displayValue": "6d",
+                    "formula": "=CALCDURATION([Start Date]8, [End Date]8)"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2020-01-14"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2020-01-22"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 130.5,
+                    "displayValue": "13,050%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 783.0,
+                    "displayValue": "783",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 8074308202303364,
+            "rowNumber": 9,
+            "parentId": 3570708574932868,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Kickoff Activity",
+                    "displayValue": "Kickoff Activity"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "In Progress",
+                    "displayValue": "In Progress"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-14T16:59:59",
+                    "formula": "=CALCSTART(Duration9, [Start Date]7, [End Date]7, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-14T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "0",
+                    "displayValue": "0"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "7",
+                    "displayValue": "7"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-14"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-14"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 755958807826308,
+            "rowNumber": 10,
+            "parentId": 3570708574932868,
+            "siblingId": 8074308202303364,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Phase 1",
+                    "displayValue": "Phase 1"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "In Progress",
+                    "displayValue": "In Progress"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-16T08:00:00",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-18T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]10), CHILDREN(Duration10))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "3d",
+                    "displayValue": "3d",
+                    "formula": "=CALCDURATION([Start Date]10, [End Date]10)"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "9",
+                    "displayValue": "9"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-15"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-17"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.333333333333333,
+                    "displayValue": "33%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 5259558435196804,
+            "rowNumber": 11,
+            "parentId": 755958807826308,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 1",
+                    "displayValue": "Activity 1"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Canceled",
+                    "displayValue": "Canceled"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-16T08:00:00",
+                    "formula": "=CALCSTART(Duration11, [Start Date]9, [End Date]9, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-16T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-15"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-15"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 3007758621511556,
+            "rowNumber": 12,
+            "parentId": 755958807826308,
+            "siblingId": 5259558435196804,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 2",
+                    "displayValue": "Activity 2"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "On Hold",
+                    "displayValue": "On Hold"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-17T08:00:00",
+                    "formula": "=CALCSTART(Duration12, [Start Date]11, [End Date]11, 0, 0, [Start Date]9, [End Date]9, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-17T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "11",
+                    "displayValue": "11"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-16"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-16"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 1.0,
+                    "displayValue": "100%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 7511358248882052,
+            "rowNumber": 13,
+            "parentId": 755958807826308,
+            "siblingId": 3007758621511556,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 3",
+                    "displayValue": "Activity 3"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "In Progress",
+                    "displayValue": "In Progress"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-18T08:00:00",
+                    "formula": "=CALCSTART(Duration13, [Start Date]12, [End Date]12, 0, 0, [Start Date]9, [End Date]9, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-18T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "12",
+                    "displayValue": "12"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-17"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-17"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 1.0,
+                    "displayValue": "100%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 1881858714668932,
+            "rowNumber": 14,
+            "parentId": 3570708574932868,
+            "siblingId": 755958807826308,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Phase 2",
+                    "displayValue": "Phase 2"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-19T08:00:00",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-23T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]14), CHILDREN(Duration14))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "3d",
+                    "displayValue": "3d",
+                    "formula": "=CALCDURATION([Start Date]14, [End Date]14)"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "10",
+                    "displayValue": "10"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-20"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-22"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 6385458342039428,
+            "rowNumber": 15,
+            "parentId": 1881858714668932,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 1",
+                    "displayValue": "Activity 1"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-19T08:00:00",
+                    "formula": "=CALCSTART(Duration15, [Start Date]10, [End Date]10, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-19T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-20"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-20"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": -1.0,
+                    "displayValue": "-100%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": -1.0,
+                    "displayValue": "-1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 4133658528354180,
+            "rowNumber": 16,
+            "parentId": 1881858714668932,
+            "siblingId": 6385458342039428,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 2",
+                    "displayValue": "Activity 2"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-20T08:00:00",
+                    "formula": "=CALCSTART(Duration16, [Start Date]15, [End Date]15, 0, 0, [Start Date]10, [End Date]10, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-20T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "15",
+                    "displayValue": "15"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-21"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-21"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 8637258155724676,
+            "rowNumber": 17,
+            "parentId": 1881858714668932,
+            "siblingId": 4133658528354180,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 3",
+                    "displayValue": "Activity 3"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-23T08:00:00",
+                    "formula": "=CALCSTART(Duration17, [Start Date]16, [End Date]16, 0, 0, [Start Date]10, [End Date]10, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-23T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "16",
+                    "displayValue": "16"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-22"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-22"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 474483831115652,
+            "rowNumber": 18,
+            "parentId": 3570708574932868,
+            "siblingId": 1881858714668932,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Closing Activity",
+                    "displayValue": "Closing Activity"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-23T16:59:59",
+                    "formula": "=CALCSTART(Duration18, [Start Date]14, [End Date]14, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-23T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "0",
+                    "displayValue": "0"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "14",
+                    "displayValue": "14"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-22"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-22"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 4978083458486148,
+            "rowNumber": 19,
+            "parentId": 8777995644080004,
+            "siblingId": 3570708574932868,
+            "locked": true,
+            "lockedForUser": false,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Monitoring",
+                    "displayValue": "Monitoring"
+                },
+                {
+                    "columnId": 3530278257512324
+                },
+                {
+                    "columnId": 8033877884882820
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-23T16:59:59",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-31T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]19), CHILDREN(Duration19))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "6d",
+                    "displayValue": "6d",
+                    "formula": "=CALCDURATION([Start Date]19, [End Date]19)"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2020-01-22"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2020-01-30"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 130.5,
+                    "displayValue": "13,050%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 783.0,
+                    "displayValue": "783",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 2726283644800900,
+            "rowNumber": 20,
+            "parentId": 4978083458486148,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Kickoff Activity",
+                    "displayValue": "Kickoff Activity"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-23T16:59:59",
+                    "formula": "=CALCSTART(Duration20, [Start Date]18, [End Date]18, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-23T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "0",
+                    "displayValue": "0"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "18",
+                    "displayValue": "18"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-22"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-22"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 7229883272171396,
+            "rowNumber": 21,
+            "parentId": 4978083458486148,
+            "siblingId": 2726283644800900,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Phase 1",
+                    "displayValue": "Phase 1"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-24T08:00:00",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-26T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]21), CHILDREN(Duration21))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "3d",
+                    "displayValue": "3d",
+                    "formula": "=CALCDURATION([Start Date]21, [End Date]21)"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "20",
+                    "displayValue": "20"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-23"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-27"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": -0.333333333333333,
+                    "displayValue": "-33%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": -1.0,
+                    "displayValue": "-1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 1600383737958276,
+            "rowNumber": 22,
+            "parentId": 7229883272171396,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 1",
+                    "displayValue": "Activity 1"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-24T08:00:00",
+                    "formula": "=CALCSTART(Duration22, [Start Date]20, [End Date]20, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-24T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-23"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-23"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 1.0,
+                    "displayValue": "100%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 6103983365328772,
+            "rowNumber": 23,
+            "parentId": 7229883272171396,
+            "siblingId": 1600383737958276,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 2",
+                    "displayValue": "Activity 2"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-25T08:00:00",
+                    "formula": "=CALCSTART(Duration23, [Start Date]22, [End Date]22, 0, 0, [Start Date]20, [End Date]20, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-25T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "22",
+                    "displayValue": "22"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-24"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-24"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 1.0,
+                    "displayValue": "100%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 3852183551643524,
+            "rowNumber": 24,
+            "parentId": 7229883272171396,
+            "siblingId": 6103983365328772,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 3",
+                    "displayValue": "Activity 3"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-26T08:00:00",
+                    "formula": "=CALCSTART(Duration24, [Start Date]23, [End Date]23, 0, 0, [Start Date]20, [End Date]20, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-26T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "23",
+                    "displayValue": "23"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-27"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-27"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": -1.0,
+                    "displayValue": "-100%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": -1.0,
+                    "displayValue": "-1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 8355783179014020,
+            "rowNumber": 25,
+            "parentId": 4978083458486148,
+            "siblingId": 7229883272171396,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Phase 2",
+                    "displayValue": "Phase 2"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-27T08:00:00",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-31T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]25), CHILDREN(Duration25))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "3d",
+                    "displayValue": "3d",
+                    "formula": "=CALCDURATION([Start Date]25, [End Date]25)"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "21",
+                    "displayValue": "21"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-28"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-30"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.333333333333333,
+                    "displayValue": "33%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 1037433784536964,
+            "rowNumber": 26,
+            "parentId": 8355783179014020,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 1",
+                    "displayValue": "Activity 1"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-27T08:00:00",
+                    "formula": "=CALCSTART(Duration26, [Start Date]21, [End Date]21, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-27T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-28"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-28"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 5541033411907460,
+            "rowNumber": 27,
+            "parentId": 8355783179014020,
+            "siblingId": 1037433784536964,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 2",
+                    "displayValue": "Activity 2"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-30T08:00:00",
+                    "formula": "=CALCSTART(Duration27, [Start Date]26, [End Date]26, 0, 0, [Start Date]21, [End Date]21, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-30T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "26",
+                    "displayValue": "26"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-29"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-29"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 3289233598222212,
+            "rowNumber": 28,
+            "parentId": 8355783179014020,
+            "siblingId": 5541033411907460,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Activity 3",
+                    "displayValue": "Activity 3"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-31T08:00:00",
+                    "formula": "=CALCSTART(Duration28, [Start Date]27, [End Date]27, 0, 0, [Start Date]21, [End Date]21, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-31T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "27",
+                    "displayValue": "27"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-30"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-30"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 1.0,
+                    "displayValue": "100%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 7792833225592708,
+            "rowNumber": 29,
+            "parentId": 4978083458486148,
+            "siblingId": 8355783179014020,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Closing Activity",
+                    "displayValue": "Closing Activity"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-01-31T16:59:59",
+                    "formula": "=CALCSTART(Duration29, [Start Date]25, [End Date]25, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-01-31T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "0",
+                    "displayValue": "0"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "25",
+                    "displayValue": "25"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-30"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-30"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 2163333691379588,
+            "rowNumber": 30,
+            "parentId": 8777995644080004,
+            "siblingId": 4978083458486148,
+            "locked": true,
+            "lockedForUser": false,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Closing",
+                    "displayValue": "Closing"
+                },
+                {
+                    "columnId": 3530278257512324
+                },
+                {
+                    "columnId": 8033877884882820
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-02-01T08:00:00",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-02-10T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]30), CHILDREN(Duration30))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "8d",
+                    "displayValue": "8d",
+                    "formula": "=CALCDURATION([Start Date]30, [End Date]30)"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2020-01-31"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2020-02-11"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 97.875,
+                    "displayValue": "9,788%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 783.0,
+                    "displayValue": "783",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 6666933318750084,
+            "rowNumber": 31,
+            "parentId": 2163333691379588,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Project Close Activities",
+                    "displayValue": "Project Close Activities"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-02-01T08:00:00",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-02-02T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]31), CHILDREN(Duration31))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "2d",
+                    "displayValue": "2d",
+                    "formula": "=CALCDURATION([Start Date]31, [End Date]31)"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "29",
+                    "displayValue": "29"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-31"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-02-03"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": -0.5,
+                    "displayValue": "-50%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": -1.0,
+                    "displayValue": "-1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 4415133505064836,
+            "rowNumber": 32,
+            "parentId": 6666933318750084,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "<<Enter Tasks For Planning>>",
+                    "displayValue": "<<Enter Tasks For Planning>>"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-02-01T08:00:00",
+                    "formula": "=CALCSTART(Duration32, [Start Date]29, [End Date]29, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-02-01T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-01-31"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-01-31"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 1.0,
+                    "displayValue": "100%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 8918733132435332,
+            "rowNumber": 33,
+            "parentId": 6666933318750084,
+            "siblingId": 4415133505064836,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "<<Enter Tasks For Planning>>",
+                    "displayValue": "<<Enter Tasks For Planning>>"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-02-02T08:00:00",
+                    "formula": "=CALCSTART(Duration33, [Start Date]32, [End Date]32, 0, 0, [Start Date]29, [End Date]29, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-02-02T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "32",
+                    "displayValue": "32"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-02-03"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-02-03"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": -1.0,
+                    "displayValue": "-100%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": -1.0,
+                    "displayValue": "-1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 122640110227332,
+            "rowNumber": 34,
+            "parentId": 2163333691379588,
+            "siblingId": 6666933318750084,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Project Close Signoff",
+                    "displayValue": "Project Close Signoff"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-02-03T08:00:00",
+                    "formula": "=MIN(CHILDREN())"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-02-10T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=CALCPERCENT(CHILDREN([% Complete]34), CHILDREN(Duration34))"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "6d",
+                    "displayValue": "6d",
+                    "formula": "=CALCDURATION([Start Date]34, [End Date]34)"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "31",
+                    "displayValue": "31"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-02-04"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-02-11"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 4626239737597828,
+            "rowNumber": 35,
+            "parentId": 122640110227332,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Red",
+                    "displayValue": "Red",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Project Close Deliverables",
+                    "displayValue": "Project Close Deliverables"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-02-03T08:00:00",
+                    "formula": "=CALCSTART(Duration35, [Start Date]31, [End Date]31, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-02-07T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "3d",
+                    "displayValue": "3d"
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-02-04"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-02-06"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.333333333333333,
+                    "displayValue": "33%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 1.0,
+                    "displayValue": "1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 2374439923912580,
+            "rowNumber": 36,
+            "parentId": 122640110227332,
+            "siblingId": 4626239737597828,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Project Manager Signoff",
+                    "displayValue": "Project Manager Signoff"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-02-08T08:00:00",
+                    "formula": "=CALCSTART(Duration36, [Start Date]35, [End Date]35, 0, 0, [Start Date]31, [End Date]31, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-02-09T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "2d",
+                    "displayValue": "2d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "35",
+                    "displayValue": "35"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-02-07"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-02-10"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": -0.5,
+                    "displayValue": "-50%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": -1.0,
+                    "displayValue": "-1",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 6878039551283076,
+            "rowNumber": 37,
+            "parentId": 122640110227332,
+            "siblingId": 2374439923912580,
+            "expanded": true,
+            "inCriticalPath": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076,
+                    "value": "Green",
+                    "displayValue": "Green",
+                    "formula": "=IF([Schedule Delta (%)]@row > 0.1, \"Red\", IF([Schedule Delta (%)]@row > 0, \"Yellow\", \"Green\"))"
+                },
+                {
+                    "columnId": 5782078071197572,
+                    "value": "Project Owner Signoff",
+                    "displayValue": "Project Owner Signoff"
+                },
+                {
+                    "columnId": 3530278257512324,
+                    "value": "Not Started",
+                    "displayValue": "Not Started"
+                },
+                {
+                    "columnId": 8033877884882820,
+                    "value": "example@example.com",
+                    "displayValue": "Example Name"
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value": "2023-02-10T08:00:00",
+                    "formula": "=CALCSTART(Duration37, [Start Date]36, [End Date]36, 0, 0, [Start Date]31, [End Date]31, 0, 0)"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value": "2023-02-10T16:59:59"
+                },
+                {
+                    "columnId": 2967328304091012,
+                    "value": 0.0,
+                    "displayValue": "0%"
+                },
+                {
+                    "columnId": 7470927931461508,
+                    "value": "1d",
+                    "displayValue": "1d"
+                },
+                {
+                    "columnId": 1841428397248388,
+                    "value": "36",
+                    "displayValue": "36"
+                },
+                {
+                    "columnId": 6345028024618884,
+                    "value": "2023-02-11"
+                },
+                {
+                    "columnId": 4093228210933636,
+                    "value": "2023-02-11"
+                },
+                {
+                    "columnId": 8596827838304132,
+                    "value": 0.0,
+                    "displayValue": "0%",
+                    "formula": "=IFERROR([Schedule Delta (Working Days)]@row / Duration@row, \"\")"
+                },
+                {
+                    "columnId": 434053513695108,
+                    "value": 0.0,
+                    "displayValue": "0",
+                    "formula": "=IFERROR(IF([End Date]@row = [Target End Date]@row, 0, IF([End Date]@row > [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) - 1, IF([End Date]@row < [Target End Date]@row, NETWORKDAYS([Target End Date]@row, [End Date]@row) + 1, \"\"))), \"\")"
+                }
+            ]
+        },
+        {
+            "id": 1248540017069956,
+            "rowNumber": 38,
+            "siblingId": 8777995644080004,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076
+                },
+                {
+                    "columnId": 5782078071197572
+                },
+                {
+                    "columnId": 3530278257512324
+                },
+                {
+                    "columnId": 8033877884882820
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value":"2022-08-10T00:11:24Z"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value":"2023-08-10T00:11:24Z"
+                },
+                {
+                    "columnId": 2967328304091012
+                },
+                {
+                    "columnId": 7470927931461508
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884
+                },
+                {
+                    "columnId": 4093228210933636
+                },
+                {
+                    "columnId": 8596827838304132
+                },
+                {
+                    "columnId": 434053513695108
+                }
+            ]
+        },
+        {
+            "id": 5752139644440452,
+            "rowNumber": 39,
+            "siblingId": 1248540017069956,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076
+                },
+                {
+                    "columnId": 5782078071197572
+                },
+                {
+                    "columnId": 3530278257512324
+                },
+                {
+                    "columnId": 8033877884882820
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value":"2022-08-10T00:11:24Z"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value":"2023-08-10T00:11:24Z"
+                },
+                {
+                    "columnId": 2967328304091012
+                },
+                {
+                    "columnId": 7470927931461508
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884
+                },
+                {
+                    "columnId": 4093228210933636
+                },
+                {
+                    "columnId": 8596827838304132
+                },
+                {
+                    "columnId": 434053513695108
+                }
+            ]
+        },
+        {
+            "id": 3500339830755204,
+            "rowNumber": 40,
+            "siblingId": 5752139644440452,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076
+                },
+                {
+                    "columnId": 5782078071197572
+                },
+                {
+                    "columnId": 3530278257512324
+                },
+                {
+                    "columnId": 8033877884882820
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value":"2022-08-10T00:11:24Z"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value":"2023-08-10T00:11:24Z"
+                },
+                {
+                    "columnId": 2967328304091012
+                },
+                {
+                    "columnId": 7470927931461508
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884
+                },
+                {
+                    "columnId": 4093228210933636
+                },
+                {
+                    "columnId": 8596827838304132
+                },
+                {
+                    "columnId": 434053513695108
+                }
+            ]
+        },
+        {
+            "id": 8003939458125700,
+            "rowNumber": 41,
+            "siblingId": 3500339830755204,
+            "expanded": true,
+            "createdAt": "2023-08-10T00:11:24Z",
+            "modifiedAt": "2023-08-10T00:11:24Z",
+            "cells": [
+                {
+                    "columnId": 1278478443827076
+                },
+                {
+                    "columnId": 5782078071197572
+                },
+                {
+                    "columnId": 3530278257512324
+                },
+                {
+                    "columnId": 8033877884882820
+                },
+                {
+                    "columnId": 715528490405764,
+                    "value":"2022-08-10T00:11:24Z"
+                },
+                {
+                    "columnId": 5219128117776260,
+                    "value":"2023-08-10T00:11:24Z"
+                },
+                {
+                    "columnId": 2967328304091012
+                },
+                {
+                    "columnId": 7470927931461508
+                },
+                {
+                    "columnId": 1841428397248388
+                },
+                {
+                    "columnId": 6345028024618884
+                },
+                {
+                    "columnId": 4093228210933636
+                },
+                {
+                    "columnId": 8596827838304132
+                },
+                {
+                    "columnId": 434053513695108
+                }
+            ]
+        }
+    ]
+}
+
